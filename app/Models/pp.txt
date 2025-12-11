@@ -1,0 +1,438 @@
+<?php
+
+namespace App\Models;
+
+class Product
+{
+    public static function getAllProducts()
+    {
+        return [
+            // Electronics Category
+            [
+                'id' => 1,
+                'name' => 'Smart TV 55" 4K UHD',
+                'price' => 699.99,
+                'image' => 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=500&fit=crop',
+                'description' => 'Crystal UHD 4K Smart TV with HDR and Smart Hub. Perfect for movie nights and gaming.',
+                'category' => 'Electronics',
+                'features' => ['55" Display', '4K Resolution', 'Smart TV', 'HDR', 'Voice Control'],
+                'specifications' => [
+                    'Screen Size' => '55 inches',
+                    'Resolution' => '4K Ultra HD',
+                    'Smart Platform' => 'Tizen OS',
+                    'Connectivity' => 'WiFi, Bluetooth, HDMI x3'
+                ]
+            ],
+            [
+                'id' => 2,
+                'name' => 'iPhone 15 Pro Max',
+                'price' => 1199.99,
+                'image' => 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500&h=500&fit=crop',
+                'description' => 'Latest iPhone with A17 Pro chip and titanium design. Professional-grade camera system.',
+                'category' => 'Electronics',
+                'features' => ['6.7" Display', 'A17 Pro Chip', '48MP Camera', '5G', 'Titanium Design'],
+                'specifications' => [
+                    'Display' => '6.7-inch Super Retina XDR',
+                    'Chip' => 'A17 Pro',
+                    'Storage' => '256GB',
+                    'Camera' => '48MP Main + 12MP Ultra Wide'
+                ]
+            ],
+            [
+                'id' => 3,
+                'name' => 'MacBook Pro 16"',
+                'price' => 2399.99,
+                'image' => 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&h=500&fit=crop',
+                'description' => 'Powerful laptop for professionals and creatives. Perfect for video editing and development.',
+                'category' => 'Electronics',
+                'features' => ['M3 Pro Chip', '16" Display', '18GB RAM', '1TB SSD', 'Liquid Retina XDR'],
+                'specifications' => [
+                    'Processor' => 'Apple M3 Pro',
+                    'Memory' => '18GB Unified Memory',
+                    'Storage' => '1TB SSD',
+                    'Display' => '16.2-inch Liquid Retina XDR'
+                ]
+            ],
+            [
+                'id' => 4,
+                'name' => 'Sony WH-1000XM5 Headphones',
+                'price' => 349.99,
+                'image' => 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop',
+                'description' => 'Industry-leading noise canceling headphones with exceptional sound quality.',
+                'category' => 'Electronics',
+                'features' => ['Noise Canceling', '30hr Battery', 'Touch Control', 'Hi-Fi Sound', 'Quick Charge'],
+                'specifications' => [
+                    'Battery Life' => '30 hours',
+                    'Charging' => 'Quick Charge (3 min = 3 hrs)',
+                    'Weight' => '250g',
+                    'Connectivity' => 'Bluetooth 5.2'
+                ]
+            ],
+
+            // Fashion Category
+            [
+                'id' => 5,
+                'name' => 'Nike Air Jordan 1',
+                'price' => 149.99,
+                'image' => 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop',
+                'description' => 'Classic basketball shoes with modern comfort technology and iconic design.',
+                'category' => 'Fashion',
+                'features' => ['Leather Upper', 'Air Cushion', 'Classic Design', 'Multiple Colors', 'Comfort Fit'],
+                'specifications' => [
+                    'Material' => 'Premium Leather',
+                    'Closure' => 'Lace-up',
+                    'Sole' => 'Rubber',
+                    'Style' => 'Basketball Sneakers'
+                ]
+            ],
+            [
+                'id' => 6,
+                'name' => 'Levi\'s 501 Original Jeans',
+                'price' => 89.99,
+                'image' => 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop',
+                'description' => 'Original fit jeans from the iconic Levi\'s brand. Timeless style and durability.',
+                'category' => 'Fashion',
+                'features' => ['100% Cotton', 'Original Fit', 'Button Fly', 'Classic Style', 'Durable'],
+                'specifications' => [
+                    'Material' => '100% Cotton',
+                    'Fit' => 'Original',
+                    'Closure' => 'Button Fly',
+                    'Wash' => 'Rigid'
+                ]
+            ],
+            [
+                'id' => 7,
+                'name' => 'Leather Jacket',
+                'price' => 199.99,
+                'image' => 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500&h=500&fit=crop',
+                'description' => 'Genuine leather jacket for men with modern cut and classic styling.',
+                'category' => 'Fashion',
+                'features' => ['Genuine Leather', 'Multiple Pockets', 'Classic Design', 'All Seasons', 'Comfortable'],
+                'specifications' => [
+                    'Material' => 'Genuine Leather',
+                    'Lining' => 'Polyester',
+                    'Closure' => 'Zipper',
+                    'Style' => 'Biker Jacket'
+                ]
+            ],
+            [
+                'id' => 8,
+                'name' => 'Rolex Watch',
+                'price' => 8999.99,
+                'image' => 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500&h=500&fit=crop',
+                'description' => 'Luxury automatic watch with premium craftsmanship and timeless design.',
+                'category' => 'Fashion',
+                'features' => ['Automatic Movement', 'Water Resistant', 'Ceramic Bezel', 'Swiss Made', 'Luxury'],
+                'specifications' => [
+                    'Movement' => 'Automatic',
+                    'Water Resistance' => '300m',
+                    'Material' => 'Stainless Steel',
+                    'Crystal' => 'Sapphire'
+                ]
+            ],
+
+            // Home & Kitchen Category - YOUR EXACT IMAGE URLs
+            [
+                'id' => 9,
+                'name' => 'Dyson Vacuum Cleaner',
+                'price' => 699.99,
+                'image' => 'https://i5.walmartimages.com/asr/78d12801-b8d6-4616-9377-bf7aae3d89d8.a14cc2163530a936503b24df85d66e1b.jpeg',
+                'description' => 'Cordless vacuum with powerful suction for complete home cleaning.',
+                'category' => 'Home & Kitchen',
+                'features' => ['Laser Detection', '60min Runtime', 'HEPA Filter', 'Cordless', 'Smart Display'],
+                'specifications' => [
+                    'Battery Life' => '60 minutes',
+                    'Dustbin Capacity' => '0.77L',
+                    'Weight' => '3kg',
+                    'Filtration' => 'Whole-machine HEPA'
+                ]
+            ],
+            [
+                'id' => 10,
+                'name' => 'KitchenAid Stand Mixer',
+                'price' => 429.99,
+                'image' => 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=500&fit=crop',
+                'description' => 'Professional stand mixer for perfect baking results every time.',
+                'category' => 'Home & Kitchen',
+                'features' => ['5-Quart Bowl', '10 Speeds', 'Tilt-Head', 'Multiple Attachments', 'Durable'],
+                'specifications' => [
+                    'Bowl Capacity' => '5 Quarts',
+                    'Power' => '500W',
+                    'Speeds' => '10 + Pulse',
+                    'Color' => 'Empire Red'
+                ]
+            ],
+            [
+                'id' => 11,
+                'name' => 'Instant Pot Pressure Cooker',
+                'price' => 129.99,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FHxOEljnn3E6NcIJHp4gr_BCZuyv5_1iBA&s',
+                'description' => 'Multi-functional pressure cooker for quick and easy meals.',
+                'category' => 'Home & Kitchen',
+                'features' => ['8-in-1 Function', 'Smart Programs', 'Stainless Steel', 'Easy Clean', 'Fast Cooking'],
+                'specifications' => [
+                    'Capacity' => '6 Quarts',
+                    'Functions' => '8 Programs',
+                    'Material' => 'Stainless Steel',
+                    'Safety' => '10+ Safety Features'
+                ]
+            ],
+            [
+                'id' => 12,
+                'name' => 'Coffee Maker',
+                'price' => 89.99,
+                'image' => 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&h=500&fit=crop',
+                'description' => 'Programmable coffee maker with thermal carafe for perfect coffee every time.',
+                'category' => 'Home & Kitchen',
+                'features' => ['Programmable', 'Thermal Carafe', '24hr Brew', 'Auto Shut-off', 'Easy Clean'],
+                'specifications' => [
+                    'Capacity' => '12 Cups',
+                    'Carafe' => 'Thermal Stainless Steel',
+                    'Programmability' => '24-hour',
+                    'Warranty' => '1 Year'
+                ]
+            ],
+            [
+                'id' => 13,
+                'name' => 'Air Fryer',
+                'price' => 99.99,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRcOT4fn6-1YTiURQVbyeJyaebvA2-K6Xl1A&s',
+                'description' => 'Digital air fryer for healthy, crispy food with little to no oil.',
+                'category' => 'Home & Kitchen',
+                'features' => ['Digital Controls', '4-Quart Capacity', '6 Presets', 'Non-Stick', 'Rapid Air'],
+                'specifications' => [
+                    'Capacity' => '4 Quarts',
+                    'Power' => '1500W',
+                    'Presets' => '6 Programs',
+                    'Temperature' => '180-400°F'
+                ]
+            ],
+
+            // Sports Category - YOUR EXACT IMAGE URLs
+            [
+                'id' => 14,
+                'name' => 'Premium Yoga Mat',
+                'price' => 39.99,
+                'image' => 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=500&fit=crop',
+                'description' => 'Non-slip yoga mat for all types of yoga practice with excellent cushioning.',
+                'category' => 'Sports',
+                'features' => ['Non-Slip Surface', '6mm Thickness', 'Eco-Friendly', 'Carry Strap', 'Durable'],
+                'specifications' => [
+                    'Thickness' => '6mm',
+                    'Material' => 'TPE',
+                    'Size' => '72" x 24"',
+                    'Weight' => '2.5 lbs'
+                ]
+            ],
+            [
+                'id' => 15,
+                'name' => 'Tennis Racket',
+                'price' => 189.99,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQygoIhtl9THd80uIjutfhDaxVDCGoZ2oIGRQ&s',
+                'description' => 'Professional tennis racket for all levels with optimal balance.',
+                'category' => 'Sports',
+                'features' => ['Carbon Fiber', 'Optimal Balance', 'Shock Absorption', 'Professional Grade', 'Lightweight'],
+                'specifications' => [
+                    'Material' => 'Carbon Fiber',
+                    'Weight' => '300g',
+                    'Head Size' => '100 sq in',
+                    'Grip Size' => '4 3/8'
+                ]
+            ],
+            [
+                'id' => 16,
+                'name' => 'Football',
+                'price' => 49.99,
+                'image' => 'https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg',
+                'description' => 'Official match football for professional games and training.',
+                'category' => 'Sports',
+                'features' => ['FIFA Pro Certified', 'Thermal Bonding', 'Perfect Roundness', 'All Weather', 'Durable'],
+                'specifications' => [
+                    'Size' => 'Size 5',
+                    'Material' => 'Synthetic Leather',
+                    'Weight' => '420-445g',
+                    'Pressure' => '8.5-15.6 PSI'
+                ]
+            ],
+            [
+                'id' => 17,
+                'name' => 'Basketball',
+                'price' => 34.99,
+                'image' => 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&h=500&fit=crop',
+                'description' => 'Official size basketball with perfect grip for indoor and outdoor play.',
+                'category' => 'Sports',
+                'features' => ['Official Size', 'Perfect Grip', 'Indoor/Outdoor', 'Durable', 'NBA Approved'],
+                'specifications' => [
+                    'Size' => 'Size 7',
+                    'Material' => 'Composite Leather',
+                    'Weight' => '22 oz',
+                    'Circumference' => '29.5 inches'
+                ]
+            ],
+            [
+                'id' => 18,
+                'name' => 'Running Shoes',
+                'price' => 119.99,
+                'image' => 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop',
+                'description' => 'Lightweight running shoes with cushioning technology for maximum comfort.',
+                'category' => 'Sports',
+                'features' => ['Lightweight', 'Cushioning', 'Breathable', 'Shock Absorption', 'Durable'],
+                'specifications' => [
+                    'Weight' => '250g',
+                    'Cushioning' => 'Gel Technology',
+                    'Upper' => 'Mesh',
+                    'Sole' => 'Rubber'
+                ]
+            ],
+
+            // Beauty Category - YOUR EXACT IMAGE URLs
+            [
+                'id' => 19,
+                'name' => 'Hair Dryer',
+                'price' => 429.99,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdMSwhb2lF_F_hJaQtJdPa1gIlVAAeCSTulQ&s',
+                'description' => 'Professional hair dryer with intelligent heat control and fast drying.',
+                'category' => 'Beauty',
+                'features' => ['Intelligent Heat Control', 'Fast Drying', '4 Attachments', 'Quiet', 'Lightweight'],
+                'specifications' => [
+                    'Power' => '1600W',
+                    'Speeds' => '3 Settings',
+                    'Heat Settings' => '4 Levels',
+                    'Weight' => '1.8 lbs'
+                ]
+            ],
+            [
+                'id' => 20,
+                'name' => 'Luxury Moisturizer',
+                'price' => 185.00,
+                'image' => 'https://images.preview.ph/preview/resize/images/2023/10/02/luxury-moisturizers-nm.webp',
+                'description' => 'Luxury moisturizing cream with premium ingredients for all skin types.',
+                'category' => 'Beauty',
+                'features' => ['24hr Hydration', 'Luxury Formula', 'All Skin Types', 'Anti-Aging', 'SPF Protection'],
+                'specifications' => [
+                    'Volume' => '50ml',
+                    'Skin Type' => 'All Types',
+                    'SPF' => '30',
+                    'Texture' => 'Cream'
+                ]
+            ],
+            [
+                'id' => 21,
+                'name' => 'Makeup Brush Set',
+                'price' => 59.99,
+                'image' => 'https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?w=500&h=500&fit=crop',
+                'description' => 'Professional makeup brush set with synthetic bristles for flawless application.',
+                'category' => 'Beauty',
+                'features' => ['12 Brushes', 'Synthetic Bristles', 'Professional Quality', 'Travel Case', 'Easy Clean'],
+                'specifications' => [
+                    'Brushes' => '12 Pieces',
+                    'Bristles' => 'Synthetic',
+                    'Case' => 'Included',
+                    'Material' => 'Aluminum + Synthetic'
+                ]
+            ],
+            [
+                'id' => 22,
+                'name' => 'Perfume Collection',
+                'price' => 89.99,
+                'image' => 'https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&h=500&fit=crop',
+                'description' => 'Elegant perfume collection with long-lasting fragrances for everyday wear.',
+                'category' => 'Beauty',
+                'features' => ['Long-lasting', 'Elegant Bottle', 'Multiple Scents', 'Day & Night', 'Luxury Packaging'],
+                'specifications' => [
+                    'Volume' => '100ml',
+                    'Type' => 'Eau de Parfum',
+                    'Longevity' => '8-10 hours',
+                    'Packaging' => 'Gift Box'
+                ]
+            ],
+
+            // Toys Category - YOUR EXACT IMAGE URLs
+            [
+                'id' => 23,
+                'name' => 'LEGO Millennium Falcon',
+                'price' => 159.99,
+                'image' => 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=500&h=500&fit=crop',
+                'description' => 'Iconic Star Wars spaceship building set with detailed minifigures.',
+                'category' => 'Toys',
+                'features' => ['1353 Pieces', 'Display Stand', 'Minifigures', 'Ages 16+', 'Collectible'],
+                'specifications' => [
+                    'Pieces' => '1353',
+                    'Age Range' => '16+',
+                    'Dimensions' => '33" x 22" x 8"',
+                    'Minifigures' => '7 Included'
+                ]
+            ],
+            [
+                'id' => 24,
+                'name' => 'Barbie Dreamhouse',
+                'price' => 199.99,
+                'image' => 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500&h=500&fit=crop',
+                'description' => '3-story dreamhouse with elevator and pool for endless imaginative play.',
+                'category' => 'Toys',
+                'features' => ['3 Stories', 'Working Elevator', 'Pool', '70+ Accessories', 'Light & Sound'],
+                'specifications' => [
+                    'Stories' => '3 Levels',
+                    'Accessories' => '70+ Pieces',
+                    'Height' => '4 feet',
+                    'Age Range' => '3+ years'
+                ]
+            ],
+            [
+                'id' => 25,
+                'name' => 'Remote Control Car',
+                'price' => 49.99,
+                'image' => 'https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=500&h=500&fit=crop',
+                'description' => 'High-speed remote control car with realistic features and long-range control.',
+                'category' => 'Toys',
+                'features' => ['2.4GHz Remote', 'High Speed', 'Rechargeable', 'Off-road', 'LED Lights'],
+                'specifications' => [
+                    'Scale' => '1:16',
+                    'Battery' => 'Rechargeable Li-ion',
+                    'Range' => '100 meters',
+                    'Charging Time' => '2 hours'
+                ]
+            ],
+            [
+                'id' => 26,
+                'name' => 'Educational Robot',
+                'price' => 79.99,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_Whfzz-TxnckbXEbAgrzyAtYEdnfeBfZ5QQ&s',
+                'description' => 'Interactive educational robot that teaches coding and programming basics.',
+                'category' => 'Toys',
+                'features' => ['Coding Lessons', 'Voice Control', 'App Control', 'STEM Learning', 'Interactive'],
+                'specifications' => [
+                    'Age Range' => '6-12 years',
+                    'Battery' => 'Lithium-ion',
+                    'Connectivity' => 'Bluetooth',
+                    'Programming' => 'Block-based'
+                ]
+            ]
+        ];
+    }
+
+    public static function getFeaturedProducts()
+    {
+        $allProducts = self::getAllProducts();
+        return array_slice($allProducts, 0, 3);
+    }
+
+    public static function getProductById($id)
+    {
+        $allProducts = self::getAllProducts();
+        foreach ($allProducts as $product) {
+            if ($product['id'] == $id) {
+                return $product;
+            }
+        }
+        return null;
+    }
+
+    public static function getProductsByCategory($category)
+    {
+        $allProducts = self::getAllProducts();
+        return array_filter($allProducts, function($product) use ($category) {
+            return $product['category'] === $category;
+        });
+    }
+}
